@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --PressStart2P: "PressStart2P";
+  --Inter-Variable: "Inter-Variable";
+  --font-weight-heading: 700;
+  --font-weight-text: 400;
+  --background-color: #fff;
+  --accent-color: #000;
+  --background-color-gradient: #d3d3d3;
+  --background-color-gradient-start: #e7e7e7;
+  --background-color-gradient-end: #1a1a1a;
+  --text-shadow-color: #fff;
+  --width-desktop: clamp(320px, 100%, 700px);
+  --width-mobile: 100%;
+  --mix-blend-mode-text-color: #fff;
+  --icon-color-main-body-sparks: #ff0000;
+  --like-icon-core: #fff;
+}
