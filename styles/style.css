@@ -13,4 +13,423 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  font-variation-settings: "wdth" var(--font-weight-text);
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--background-color-gradient),
+      var(--background-color-gradient) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--background-color-gradient),
+      var(--background-color-gradient) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--background-color-gradient-start) 0.01%,
+      var(--background-color-gradient-end)
+    );
+}
+
+.size {
+  inline-size: var(--width-desktop);
+  margin: 0 auto;
+  background-color: var(--background-color);
+  display: grid;
+}
+
+.header {
+  justify-content: center;
+  margin-block-start: 100px;
+  border: 2px solid var(--accent-color);
+  max-height: 368px;
+}
+
+.font-settings__for__header {
+  font-family: var(--PressStart2P), "Arial", sans-serif;
+  font-weight: var(--font-weight-for-header-and-buttons);
+  text-transform: uppercase;
+}
+
+.watermark__on__image {
+  font-family: var(--PressStart2P), "Arial", sans-serif;
+  font-weight: var(--font-weight-for-header-and-buttons);
+  text-transform: uppercase;
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 22.09px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: var(--accent-color);
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 0 0 var(--text-shadow-color),
+    0 1px 0 var(--text-shadow-color), -1px 0 0 var(--text-shadow-color),
+    0 -1px 0 var(--text-shadow-color);
+}
+
+.watermark__text-settings {
+  text-transform: lowercase;
+}
+
+.heading {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: 100%;
+  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0 20px 0;
+}
+
+.logo__link {
+  text-decoration: none;
+}
+
+.subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 100%;
+  text-align: center;
+  padding-block: 0 128px;
+}
+
+.button__text {
+  font-family: var(--PressStart2P), "Arial", sans-serif;
+  font-weight: var(--font-weight-for-header-and-buttons);
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 12.6px;
+  padding: 10.5px 35px;
+  position: relative;
+  z-index: 1;
+  color: var(--mix-blend-mode-text-color);
+  mix-blend-mode: difference;
+}
+
+.cards {
+  margin-block-end: 50px;
+  border: 2px solid var(--accent-color);
+}
+
+.cards:last-child {
+  margin-block-end: 0;
+}
+
+.cards__heading {
+  font-family: var(--Inter-Variable), "Arial", sans-serif;
+  font-weight: var(--font-weight-heading);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  line-height: 21.78px;
+  padding: 3px 24px 3px 10px;
+  min-height: 31.5px;
+}
+
+.text__settings {
+  padding: 25px;
+}
+
+.cards__text {
+  font-family: var(--Inter-Variable), "Arial", sans-serif;
+  font-weight: var(--font-weight-text);
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  line-height: 21px;
+}
+
+.cards__text:first-child {
+  padding-block-end: 27px;
+}
+
+.cards__list {
+  position: relative;
+}
+
+.buttons__settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  max-height: 38px;
+}
+
+.card__like-button {
+  margin-block-end: 25px;
+  margin-inline-end: 25px;
+  position: relative;
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  min-height: 38.3px;
+}
+
+.card__like-button::after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.floppy__icon {
+  color: var(--mix-blend-mode-text-color);
+  mix-blend-mode: difference;
+  min-width: 21px;
+  max-width: 21px;
+  height: 21px;
+}
+
+.floppy__icon-modal {
+  min-width: 39px;
+  max-width: 39px;
+  height: 39px;
+  mix-blend-mode: inherit;
+  color: var(--accent-color);
+}
+
+.image {
+  inline-size: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image__settings {
+  overflow: hidden;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  display: grid;
+}
+
+.image__filter-two {
+  filter: saturate(0.2);
+}
+
+.image__filter-three {
+  filter: hue-rotate(-2deg) saturate(4) brightness(1) contrast(1.2);
+}
+
+.image__filter-four {
+  filter: hue-rotate(20deg) brightness(1.2) saturate(1);
+}
+
+.image__filter-five {
+  filter: invert(1) brightness(0.8);
+}
+
+.image__filter-six {
+  filter: sepia(0.8) saturate(0.5);
+}
+
+.image__filter-seven {
+  filter: blur(15px);
+}
+
+.image__filter-eight {
+  filter: hue-rotate(95deg) contrast(0.4) saturate(2) blur(1.5px);
+}
+
+.save__button:hover {
+  cursor: pointer;
+}
+
+.close__button:hover {
+  cursor: pointer;
+}
+
+.save__button-text {
+  border: none;
+  padding: 0;
+}
+
+.close__button-text {
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.save__button::before {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.close__button::before {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.main {
+  margin-block-start: 100px;
+  margin-block-end: 50px;
+}
+
+.save__button {
+  border: 2px solid var(--accent-color);
+  display: flex;
+  gap: 8px;
+  padding-block: 18.5px;
+  padding-inline: 19px 21px;
+  align-items: center;
+  background-color: var(--background-color);
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+  max-height: 55px;
+}
+
+.close__button {
+  border: 2px solid var(--accent-color);
+  display: flex;
+  padding-block: 18.5px;
+  padding-inline: 19px 21px;
+  margin-block-start: 30px;
+  margin-block-end: 0;
+  background-color: var(--background-color);
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  justify-self: center;
+  width: 293px;
+  height: 38px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.footer {
+  background-color: transparent;
+  border: none;
+  margin-block-end: 103px;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog[open] {
+  display: grid;
+  position: fixed;
+  top: -5%;
+  overflow: hidden;
+  border: 2px solid var(--accent-color);
+  max-width: 353px;
+  padding: 30px;
+  max-height: 191px;
+  background-color: var(--background-color);
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.heading__modal {
+  font-family: var(--PressStart2P), "Arial", sans-serif;
+  font-weight: var(--font-weight-for-header-and-buttons);
+  text-transform: uppercase;
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 21px;
+  text-align: center;
+  color: var(--accent-color);
+  text-align: left;
+}
+
+.dialogs__content {
+  display: flex;
+  gap: 20px;
+  max-width: 293px;
+  flex-direction: row;
+  align-items: center;
+}
+
+@supports (-webkit-text-stroke: 1px var(--text-shadow-color)) {
+  .watermark__on__image {
+    -webkit-text-stroke: 1px var(--text-shadow-color);
+    text-shadow: none;
+  }
+}
+
+@media (width <= 375px) {
+  .size {
+    inline-size: var(--width-mobile);
+  }
+
+  .heading {
+    line-height: 49px;
+  }
+
+  .header {
+    max-height: 327px;
+  }
+
+  .subtitle {
+    padding-block: 0 120px;
+  }
+
+  .cards__text {
+    word-spacing: 1px;
+  }
+
+  .floppy__icon {
+    min-width: 28px;
+    max-width: 28px;
+    height: 28px;
+  }
+
+  .cards__heading {
+    padding: 4.5px 10px 6px;
+    min-height: 31px;
+  }
+
+  .save__button {
+    flex-direction: column;
+    padding-block: 15px;
+    padding-inline: 19.5px 20.5px;
+    min-height: 84px;
+  }
+
+  .watermark__on__image {
+    top: 23px;
+    right: 11px;
+  }
+
+  .footer {
+    margin-block-end: 100px;
+  }
+
+  dialog[open] {
+    max-width: 341px;
+    padding-inline-start: 42px;
+    padding-inline-end: 42px;
+    padding-block-start: 30px;
+    padding-block-end: 30px;
+    top: 1%;
+  }
+
+  .dialogs__content {
+    max-width: 257px;
+  }
+
+  .close__button {
+    width: 257px;
+  }
+
+  .floppy__icon-modal {
+    min-width: 39px;
+    max-width: 39px;
+    height: 39px;
+  }
 }
