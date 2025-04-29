@@ -9,122 +9,79 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-.card__icon-button:focus {
+.logo__link:focus {
   outline: none;
 }
 
-.card__like-button {
+.additional__settings-buttons:focus {
+  outline: none;
+}
+
+.animation__buttons {
   transition: box-shadow 0.5s ease;
 }
 
-.card__like-button:focus {
-  outline: none;
+.animation__buttons:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
 .card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
   outline: none;
 }
 
-.save__button {
-  transition: box-shadow 0.5s ease;
-}
-
-.save__button:focus {
-  outline: none;
-}
-
-.save__button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
-}
-
-.save__button::before {
-  width: 100%;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-  background-color: var(--accent-color);
-  transform-origin: 0% 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-.save__button:hover::before {
-  transition: transform 0.5s ease-in-out;
-  transform-origin: 0% 100%;
-  height: 61.2px;
-  left: 0;
-  height: 100%;
-  top: 0;
-  transform: scaleX(1);
-  background-color: var(--accent-color);
-}
-
-.close__button {
-  transition: box-shadow 0.5s ease;
-}
-
-.close__button:focus {
-  outline: none;
-}
-
-.close__button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
-}
-
-.close__button::before {
-  width: 100%;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-  background-color: var(--accent-color);
-  transform-origin: 0% 100%;
-  height: 38px;
-  left: 0;
-}
-
-.close__button:hover::before {
-  transition: transform 0.5s ease-in-out;
-  transform-origin: 0% 100%;
-  height: 38px;
-  left: 0;
-  transform: scaleX(1);
-  background-color: var(--accent-color);
-}
-
-.card__like-button::after {
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: 0% 100%;
-  height: 34.6px;
-  left: 0;
-  background-color: var(--accent-color);
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__like-button:hover {
+.additional__settings-buttons:hover {
   cursor: pointer;
 }
 
-.card__like-button:hover::after {
+.animation__buttons::before {
+  width: 100%;
+  transform: scaleX(0);
   transition: transform 0.5s ease-in-out;
-  transform: scaleX(1);
-  transform-origin: 0% 100%;
-  height: 34.6px;
-  left: 0;
   background-color: var(--accent-color);
+  transform-origin: 0% 100%;
+  left: 0;
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+.save__button::before {
+  height: 100%;
+  top: 0;
+}
+
+.close__button::before {
+  height: 38px;
+}
+
+.card__like-button::before {
+  height: 34.6px;
+}
+
+.animation__buttons:hover::before {
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 0% 100%;
+  left: 0;
+  transform: scaleX(1);
+  background-color: var(--accent-color);
+}
+
+.close__button:hover::before {
+  height: 38px;
+}
+
+.save__button:hover::before {
+  height: 100%;
+  top: 0;
+}
+
+.card__like-button:hover::before {
+  height: 34.6px;
 }
 
 .like__button {
   transition: border 0.3s ease;
   border: 2px solid transparent;
-}
-
-.like__button:hover {
-  cursor: pointer;
-}
-
-.like__button:focus {
-  outline: none;
 }
 
 .like__button:focus-visible {
