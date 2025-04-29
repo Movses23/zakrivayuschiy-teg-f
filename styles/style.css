@@ -15,7 +15,7 @@
   min-block-size: 100dvb;
   background-color: var(--background-color);
   color: var(--accent-color);
-  font-variation-settings: "wdth" var(--font-weight-text);
+  font-variation-settings: "wght" var(--font-weight-heading);
   background-attachment: fixed;
   background-size: cover;
   background-image: repeating-linear-gradient(
@@ -50,7 +50,6 @@
   justify-content: center;
   margin-block-start: 100px;
   border: 2px solid var(--accent-color);
-  max-height: 368px;
 }
 
 .font-settings__for__header {
@@ -73,6 +72,7 @@
   text-shadow: 1px 0 0 var(--text-shadow-color),
     0 1px 0 var(--text-shadow-color), -1px 0 0 var(--text-shadow-color),
     0 -1px 0 var(--text-shadow-color);
+  opacity: 0.5;
 }
 
 .watermark__text-settings {
@@ -119,7 +119,6 @@
 
 .cards__heading {
   font-family: var(--Inter-Variable), "Arial", sans-serif;
-  font-weight: var(--font-weight-heading);
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 21.78px;
   padding: 3px 24px 3px 10px;
@@ -132,17 +131,13 @@
 
 .cards__text {
   font-family: var(--Inter-Variable), "Arial", sans-serif;
-  font-weight: var(--font-weight-text);
+  font-variation-settings: "wght" var(--font-weight-text);
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 21px;
 }
 
 .cards__text:first-child {
   padding-block-end: 27px;
-}
-
-.cards__list {
-  position: relative;
 }
 
 .buttons__settings {
@@ -164,17 +159,44 @@
   margin-block-end: 25px;
   margin-inline-end: 25px;
   position: relative;
-  border: 2px solid var(--accent-color);
   background-color: transparent;
   padding: 0;
-  display: flex;
   min-height: 38.3px;
+  max-width: 126px;
 }
 
-.card__like-button::after {
-  display: block;
-  content: "";
-  position: absolute;
+.save__button {
+  gap: 8px;
+  padding-block: 18.5px;
+  padding-inline: 19px 21px;
+  align-items: center;
+  background-color: var(--background-color);
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+  max-height: 55px;
+}
+
+.close__button {
+  padding-block: 18.5px;
+  padding-inline: 19px 21px;
+  margin-block-start: 30px;
+  margin-block-end: 0;
+  background-color: var(--background-color);
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  justify-self: center;
+  width: 293px;
+  height: 38px;
+}
+
+.animation__buttons {
+  border: 2px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .floppy__icon {
@@ -204,42 +226,35 @@
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
   display: grid;
+  position: relative;
 }
 
-.image__filter-two {
+.filter__saturate {
   filter: saturate(0.2);
 }
 
-.image__filter-three {
+.filter__contrast {
   filter: hue-rotate(-2deg) saturate(4) brightness(1) contrast(1.2);
 }
 
-.image__filter-four {
+.filter__brightness {
   filter: hue-rotate(20deg) brightness(1.2) saturate(1);
 }
 
-.image__filter-five {
+.filter__invert {
   filter: invert(1) brightness(0.8);
 }
 
-.image__filter-six {
+.filter__sepia {
   filter: sepia(0.8) saturate(0.5);
 }
 
-.image__filter-seven {
+.filter__blur {
   filter: blur(15px);
 }
 
-.image__filter-eight {
+.filter__hue-rotate {
   filter: hue-rotate(95deg) contrast(0.4) saturate(2) blur(1.5px);
-}
-
-.save__button:hover {
-  cursor: pointer;
-}
-
-.close__button:hover {
-  cursor: pointer;
 }
 
 .save__button-text {
@@ -253,59 +268,19 @@
   text-transform: uppercase;
 }
 
-.save__button::before {
-  display: block;
-  content: "";
-  position: absolute;
-}
-
-.close__button::before {
-  display: block;
-  content: "";
-  position: absolute;
-}
-
 .main {
   margin-block-start: 100px;
+}
+
+.section__content {
   margin-block-end: 50px;
-}
-
-.save__button {
-  border: 2px solid var(--accent-color);
-  display: flex;
-  gap: 8px;
-  padding-block: 18.5px;
-  padding-inline: 19px 21px;
-  align-items: center;
-  background-color: var(--background-color);
-  justify-self: center;
-  position: relative;
-  z-index: 1;
-  max-height: 55px;
-}
-
-.close__button {
-  border: 2px solid var(--accent-color);
-  display: flex;
-  padding-block: 18.5px;
-  padding-inline: 19px 21px;
-  margin-block-start: 30px;
-  margin-block-end: 0;
-  background-color: var(--background-color);
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  align-items: center;
-  justify-self: center;
-  width: 293px;
-  height: 38px;
 }
 
 .sparks {
   opacity: 0;
 }
 
-.footer {
+.dialog__button {
   background-color: transparent;
   border: none;
   margin-block-end: 103px;
@@ -323,7 +298,6 @@ dialog[open] {
   border: 2px solid var(--accent-color);
   max-width: 353px;
   padding: 30px;
-  max-height: 191px;
   background-color: var(--background-color);
 }
 
@@ -371,10 +345,6 @@ dialog[open]::backdrop {
     line-height: 49px;
   }
 
-  .header {
-    max-height: 327px;
-  }
-
   .subtitle {
     padding-block: 0 120px;
   }
@@ -406,7 +376,7 @@ dialog[open]::backdrop {
     right: 11px;
   }
 
-  .footer {
+  .dialog__button {
     margin-block-end: 100px;
   }
 
