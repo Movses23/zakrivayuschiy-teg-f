@@ -120,8 +120,8 @@
 .cards__heading {
   font-family: var(--Inter-Variable), "Arial", sans-serif;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  line-height: 21.78px;
-  padding: 5px 24px 5px 10px;
+  line-height: 100%;
+  padding: 6.5px 24px 7px 10px;
 }
 
 .text__settings {
@@ -359,8 +359,7 @@ dialog[open]::backdrop {
   }
 
   .cards__heading {
-    padding: 4.5px 10px 6px;
-    min-height: 31px;
+    padding: 8.5px 10px 6px;
   }
 
   .save__button {
