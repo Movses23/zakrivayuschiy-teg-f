@@ -121,8 +121,7 @@
   font-family: var(--Inter-Variable), "Arial", sans-serif;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 21.78px;
-  padding: 3px 24px 3px 10px;
-  min-height: 31.5px;
+  padding: 5px 24px 5px 10px;
 }
 
 .text__settings {
