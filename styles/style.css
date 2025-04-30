@@ -13,7 +13,6 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-color: var(--background-color);
   color: var(--accent-color);
   font-variation-settings: "wght" var(--font-weight-heading);
   background-attachment: fixed;
@@ -42,7 +41,6 @@
 .size {
   inline-size: var(--width-desktop);
   margin: 0 auto;
-  background-color: var(--background-color);
   display: grid;
 }
 
@@ -50,6 +48,7 @@
   justify-content: center;
   margin-block-start: 100px;
   border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
 }
 
 .font-settings__for__header {
@@ -111,6 +110,7 @@
 .cards {
   margin-block-end: 50px;
   border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
 }
 
 .cards:last-child {
